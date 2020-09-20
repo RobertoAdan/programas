@@ -1,0 +1,20 @@
+#Programa que convierte de rectangular a polar
+import cmath
+import math
+r=float(input("Dame la parte real del numero "))
+i=float(input("Dame la parte imaginaria del numero "))
+rect = complex(r,i)
+polar=cmath.polar(rect)
+Mag=polar[0]
+Ar=polar[1]
+Ag=(Ar*180)/cmath.pi
+print("Rectangular=",rect,"   Polar=",Mag,"<",Ag)
+
+#Ahora de polar a rectangular
+Magnitud=float(input("Dame la magnitud "))
+angulo=float(input("Dame el angulo "))
+angulo_r=angulo*cmath.pi/180
+real=Magnitud*math.cos(angulo_r)
+imag=Magnitud*math.sin(angulo_r)
+Nc=complex(real,imag)
+print ("Polar=",Magnitud,"<",angulo,"  Rectangular=",Nc)
